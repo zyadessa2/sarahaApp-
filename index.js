@@ -8,10 +8,6 @@ const app = express();
 
 // export default app;
 
-
-import express from "express";
-import bootstrap from "../bootstrap.js";
-
 let server;
 
 export default async function handler(req, res) {
