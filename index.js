@@ -4,8 +4,6 @@ const app = express();
 
 // import "dotenv/config";
 
-
-
-
-
 bootstrap(app, express);
+
+export default app;
