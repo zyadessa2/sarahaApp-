@@ -2,20 +2,6 @@ import express from "express";
 import bootstrap from "./src/bootstrap.js";
 const app = express();
 
-// import "dotenv/config";
+bootstrap(app, express);
 
-// bootstrap(app, express);
-
-// export default app;
-
-let server;
-
-export default async function handler(req, res) {
-  if (!server) {
-    const app = express();
-    await bootstrap(app, express);
-    server = app;
-  }
-
-  return server(req, res);
-}
+export default app;

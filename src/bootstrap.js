@@ -84,9 +84,9 @@ const bootstrap = async (app, express) => {
 
     app.use('/uploads', express.static('uploads'));
 
-    app.all('*', (req, res, next) => {
-        return next(new NotFoundUrlExeption());
-    });
+     app.all('{/*s}', (req, res, next) => {
+         return next(new NotFoundUrlExeption());
+     });
 
     app.use((err, req, res, next) => {
         console.log("Error occurred: ", err.stack);
